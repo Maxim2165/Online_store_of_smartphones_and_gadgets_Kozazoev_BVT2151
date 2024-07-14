@@ -1,0 +1,192 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-07-14 19:12+0300\n"
+"PO-Revision-Date: 2024-07-14 19:13+0000\n"
+"Last-Translator: b'  <>'\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Translated-Using: django-rosetta 0.7.6\n"
+
+#: .\coupons\forms.py:5
+msgid "Coupon"
+msgstr "Cupón"
+
+#: .\korzina\forms.py:8 .\shop\templates\korzina\detail.html:14
+msgid "Quantity"
+msgstr "Cantidad"
+
+#: .\myshop\settings.py:90
+msgid "English"
+msgstr "Inglés"
+
+#: .\myshop\settings.py:91
+msgid "Spanish"
+msgstr "Español"
+
+#: .\myshop\urls.py:10
+#, fuzzy
+#| msgid "Your korzina"
+msgid "^korzina/"
+msgstr "tu korzina"
+
+#: .\myshop\urls.py:11
+msgid "^orders/"
+msgstr "tu pedidos"
+
+#: .\myshop\urls.py:12
+#, fuzzy
+#| msgid "Coupon"
+msgid "^coupons/"
+msgstr "Cupón"
+
+#: .\shop\templates\korzina\detail.html:8
+#, fuzzy
+#| msgid "Your korzina"
+msgid "Your shopping korzina"
+msgstr "tu korzina"
+
+#: .\shop\templates\korzina\detail.html:12
+msgid "Image"
+msgstr "Imagen"
+
+#: .\shop\templates\korzina\detail.html:13
+msgid "Product"
+msgstr "Producto"
+
+#: .\shop\templates\korzina\detail.html:15
+#: .\shop\templates\korzina\detail.html:36
+msgid "Remove"
+msgstr "Eliminar"
+
+#: .\shop\templates\korzina\detail.html:16
+msgid "Unit price"
+msgstr "Precio unitario"
+
+#: .\shop\templates\korzina\detail.html:17
+msgid "Price"
+msgstr "Precio"
+
+#: .\shop\templates\korzina\detail.html:60
+msgid "Total"
+msgstr "Total"
+
+#: .\shop\templates\korzina\detail.html:70
+msgid "Apply"
+msgstr "Aplicar"
+
+#: .\shop\templates\korzina\detail.html:74
+msgid "Continue shopping"
+msgstr "Seguir comprando"
+
+#: .\shop\templates\korzina\detail.html:76
+msgid "Checkout"
+msgstr "Verificar"
+
+#: .\shop\templates\shop\base.html:8 .\shop\templates\shop\base.html.py:14
+msgid "MobileMart"
+msgstr "MóvilMart"
+
+#: .\shop\templates\shop\base.html:19
+msgid "Language"
+msgstr "Idioma"
+
+#: .\shop\templates\shop\base.html:40
+msgid "Your korzina"
+msgstr "tu korzina"
+
+#: .\shop\templates\shop\base.html:42
+#, python-format
+msgid ""
+"\n"
+"                        %(total_items)s item%(total_items_plural)s,\n"
+"                        $%(total_price)s\n"
+"                    "
+msgstr ""
+"\n"
+"%(total_items)s artículo%(total_items_plural)s,\n"
+"$%(total_price)s"
+
+#: .\shop\templates\shop\base.html:48
+msgid "Your korzina is empty."
+msgstr "Tu korzina está vacía."
+
+#: .\shop\templates\shop\base.html:59
+msgid "About us"
+msgstr "Sobre nosotros"
+
+#: .\shop\templates\shop\base.html:60
+msgid ""
+"Our online store offers a wide range of smartphones and accessories from "
+"leading manufacturers. We guarantee high quality products and provide "
+"convenient delivery and payment terms."
+msgstr ""
+"Nuestra tienda online ofrece una amplia gama de smartphones y accesorios de "
+"los principales fabricantes. Garantizamos productos de alta calidad y "
+"ofrecemos condiciones convenientes de entrega y pago."
+
+#: .\shop\templates\shop\base.html:63
+msgid "Contacts"
+msgstr "Contactos"
+
+#: .\shop\templates\shop\base.html:64
+msgid "Address"
+msgstr "DIRECCIÓN"
+
+#: .\shop\templates\shop\base.html:64
+msgid "Moscow"
+msgstr "Moscú"
+
+#: .\shop\templates\shop\base.html:64
+msgid "Pushkin St."
+msgstr "Calle Pushkin."
+
+#: .\shop\templates\shop\base.html:64
+msgid "12"
+msgstr "12"
+
+#: .\shop\templates\shop\base.html:65
+msgid "Phone"
+msgstr "Teléfono"
+
+#: .\shop\templates\shop\base.html:65
+msgid "+7 (495) 123-45-67"
+msgstr "+7 (495) 123-45-67"
+
+#: .\shop\templates\shop\base.html:66
+msgid "Email"
+msgstr "Correo electrónico"
+
+#: .\shop\templates\shop\base.html:66
+msgid "info@myshop.com"
+msgstr "info@mitienda.com"
+
+#: .\shop\templates\shop\product\detail.html:17
+msgid "Add to korzina"
+msgstr "Añadir a Korzina"
+
+#: .\shop\templates\shop\product\list.html:9
+msgid "Categories"
+msgstr "Categorías"
+
+#: .\shop\templates\shop\product\list.html:12
+msgid "All"
+msgstr "Todo"
+
+#: .\shop\templates\shop\product\list.html:22
+#| msgid "Product"
+msgid "Products"
+msgstr "Productos"
+
+#~ msgid "Add to cart"
+#~ msgstr "Añadir a la korzina"

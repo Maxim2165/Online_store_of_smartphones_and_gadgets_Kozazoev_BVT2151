@@ -1,0 +1,78 @@
+{% extends "shop/base.html" %}
+{% load i18n %}
+{% load static %}
+{% block title %}
+    <h1 class="text-center">Your shopping korzina</h1>
+{% endblock %}
+{% block content %}
+    <h1>{% trans "Your shopping korzina" %}</h1>
+    <table class="korzina">
+        <thead>
+        <tr>
+            <th>{% trans "Image" %}</th>
+            <th>{% trans "Product" %}</th>
+            <th>{% trans "Quantity" %}</th>
+            <th>{% trans "Remove" %}</th>
+            <th>{% trans "Unit price" %}</th>
+            <th>{% trans "Price" %}</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for item in korzina %}
+            {% with product=item.product %}
+                <tr>
+                    <td>
+                        <a href="{{ product.get_absolute_url }}">
+                            <img src="
+                                {% if product.image %}
+                                    {{ product.image.url }}
+                                {% else %}
+                                    {% static 'shop/img/no_image.png' %}
+                                {% endif %}">
+                        </a>
+                    </td>
+                    <td>{{ product.name }}</td>
+                    <td>{{ item.quantity }}</td>
+                    <td><a href="{% url 'korzina:korzina_remove' product.id%}">{% trans "Remove" %}</a></td>
+                    <td class="num">${{ item.price }}</td>
+                    <td class="num">${{ item.total_price }}</td>
+                </tr>
+            {% endwith %}
+        {% endfor %}
+        {% if korzina.coupon %}
+    <tr class="subtotal">
+        <td>Subtotal</td>
+        <td colspan="4"></td>
+        <td class="num">${{ korzina.get_total_price }}</td>
+    </tr>
+    <tr>
+        <td>
+            "{{ korzina.coupon.code }}" coupon
+            ({{ korzina.coupon.discount }}% off)
+        </td>
+        <td colspan="4"></td>
+        <td class="num neg">
+            - ${{ korzina.get_discount|floatformat:"2" }}
+        </td>
+    </tr>
+{% endif %}
+<tr class="total">
+    <td>{% trans "Total" %}</td>
+    <td colspan="4"></td>
+    <td class="num">
+        ${{ korzina.get_total_price_after_discount|floatformat:"2" }}
+    </td>
+</tr>
+        </tbody>
+    </table>
+    <form action="{% url 'coupons:apply' %}" method="post">
+    {{ coupon_apply_form }}
+    <input type="submit" value="{% trans "Apply" %}">
+    {% csrf_token %}
+    </form>
+    <p class="text-right">
+        <a href="{% url 'shop:product_list' %}" class="button light">{% trans "Continue shopping" %}</a>
+        <a href="{% url 'orders:order_create' %}" class="button">
+        {% trans "Checkout" %}</a>
+    </p>
+{% endblock %}

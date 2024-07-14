@@ -1,0 +1,20 @@
+{% extends "shop/base.html" %}
+{% load i18n %}
+{% load static %}
+{% block title %}
+    {% if category %}{{ category.title }}{% else %}Products{% endif %}
+{% endblock %}
+{% block content %}
+    <div class="product-detail">
+        <h1>{{ product.name }}</h1>
+        <img src="{% if product.image %}{{ product.image.url }}{% else %}{% static 'shop/img/no_image.png' %}{% endif %}">
+        <h2><a href="{{ product.category.get_absolute_url }}">{{ product.category }}</a></h2>
+        {{ product.description|linebreaks }}
+    <p class="price">${{ product.price }}</p>
+    <form action="{% url 'korzina:korzina_add' product.id %}" method="post">
+        {{ korzina_product_form }}
+        {% csrf_token %}
+        <input type="submit" value="{% trans "Add to korzina" %}">
+</form>
+    </div>
+{% endblock %}

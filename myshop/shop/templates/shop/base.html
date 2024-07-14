@@ -1,0 +1,70 @@
+{% load i18n %}
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>
+        {% block title %}{% trans "MobileMart" %}{% endblock %}
+    </title>
+    <link href="{% static 'shop/css/base.css' %}" rel="stylesheet">
+</head>
+<body>
+<div id="header">
+    <a href="/" class="logo">{% trans "MobileMart" %}</a>
+    {% get_current_language as LANGUAGE_CODE %}
+    {% get_available_languages as LANGUAGES %}
+    {% get_language_info_list for LANGUAGES as languages %}
+    <div class="languages">
+        <p>{% trans "Language" %}:</p>
+        <ul class="languages">
+            {% for language in languages %}
+                <li>
+                    <a href="/{{ language.code }}/" {% if language.code == LANGUAGE_CODE %} class="selected"{% endif %}>
+                        {{ language.name_local }}
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+<div id="subheader">
+    <div class="logo1">
+    <a href="{% url "shop:product_list" %}">
+        <img src="{% static 'shop/img/logot.avif' %}" alt="Логотип">
+     </a>
+    </div>
+    <div class="korzina">
+        {% with total_items=korzina|length %}
+            {% if korzina|length > 0 %}
+                {% trans "Your korzina" %}:
+                <a href="{% url 'korzina:korzina_detail' %}">
+                    {% blocktrans with total_items_plural=total_items|pluralize total_price=korzina.get_total_price %}
+                        {{ total_items }} item{{ total_items_plural }},
+                        ${{ total_price }}
+                    {% endblocktrans %}
+                </a>
+            {% else %}
+                {% trans "Your korzina is empty." %}
+            {% endif %}
+        {% endwith %}
+    </div>
+</div>
+<div id="content">
+    {% block content %}
+    {% endblock %}
+</div>
+<div id="footer">
+    <div class="footer-section" style="float: left; width: 45%; padding: 0 20px;">
+        <h3>{% trans "About us" %}</h3>
+        <p>{% trans "Our online store offers a wide range of smartphones and accessories from leading manufacturers. We guarantee high quality products and provide convenient delivery and payment terms." %}</p>
+    </div>
+    <div class="footer-section" style="float: right; width: 45%; text-align: right; padding: 0 20px;">
+        <h3>{% trans "Contacts" %}</h3>
+        <p>{% trans "Address" %}: {% trans "Moscow" %}, {% trans "Pushkin St." %}, {% trans "12" %}</p>
+        <p>{% trans "Phone" %}: {% trans "+7 (495) 123-45-67" %}</p>
+        <p>{% trans "Email" %}: {% trans "info@myshop.com" %}</p>
+    </div>
+</div>
+</body>
+</html>

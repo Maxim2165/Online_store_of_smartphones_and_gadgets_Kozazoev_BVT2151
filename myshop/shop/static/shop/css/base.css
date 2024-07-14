@@ -1,0 +1,612 @@
+body {
+    margin:0;
+    padding:0;
+    font-family:helvetica, sans-serif;
+    background-image: url('../img/1.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+h1, h2, h3, h4, h5 , h6 {
+    font-family: 'Ubuntu', sans-serif; font-weight:normal;
+}
+
+a {
+    text-decoration:none;
+    color:#5993bb;
+}
+
+a:hover {
+    color:#77b6e2;
+}
+
+a.button, input[type="submit"] {
+    color:#fff;
+    background:#5993bb;
+    border-radius:4px;
+    padding:10px 20px;
+    font-size:14px;
+    border:0;
+}
+
+a.button.light {
+    color:#666;
+    background:#ededed;
+}
+
+.text-left {
+    text-align:left;
+}
+
+.text-right {
+    text-align:right;
+}
+
+table {
+    width:100%;
+    border-spacing:0;
+    border-collapse: collapse;
+}
+
+table th, table td {
+    text-align:left;
+    font-size:14px;
+    padding:10px;
+    margin:0;
+}
+
+tbody tr:nth-child(odd) {
+    background:#efefef;
+}
+
+tbody tr.subtotal {
+    background:#ccc;
+}
+
+thead th, tbody tr.total {
+    background: #284fed;
+    color:#fff;
+    font-weight:bold;
+}
+
+table.korzina {
+    margin-bottom:40px;
+
+}
+
+table.korzina img {
+    width:180px;
+}
+
+table.korzina td img {
+    width: 100%;
+    height: 100px; /* Фиксированная высота */
+    object-fit: contain; /* Масштабирование изображения без обрезания */
+    margin-bottom: 8px;
+}
+
+tbody td.num {
+    text-align:right;
+}
+
+table.korzina td,
+table.korzina th {
+    font-size: 17px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+td input[type="submit"] {
+    font-size:12px;
+    padding:4px 10px;
+
+}
+
+form p label, form p input {
+    float:left;
+    clear:both;
+}
+
+
+/* Стиль кнопки "Apply" */
+input[type="submit"] {
+    background-color: #5690dc;
+    border: none;
+    border-radius: 6px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+input[type="submit"]:hover {
+    background-color: #5804dd;
+}
+
+/* Стиль кнопки "Continue shopping" */
+a.button.light {
+    background-color: #f2f2f2;
+    border: none;
+    border-radius: 6px;
+    color: #333;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+a.button.light:hover {
+    background-color: #fff;
+}
+
+/* Стиль кнопки "Checkout" */
+a.button {
+    background-color: #5690dc;
+    border: none;
+    border-radius: 6px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+a.button:hover {
+    background-color: #5804dd;
+}
+
+form {
+    text-align: left;
+}
+
+
+form p label {
+    font-size:14px;
+    padding-bottom:4px;
+}
+
+form p input {
+    width:300px;
+    font-size:13px;
+    margin-bottom:10px;
+    padding:10px 12px;
+    border:0;
+    background:#efefef;
+    color:#666;
+    border-radius:4px;
+}
+
+ul.errorlist {
+   float:left;
+   color:#ff0000;
+   clear:both;
+   font-size:13px;
+   margin:0;
+   padding:0;
+}
+
+
+#header {
+    padding:10px 100px;
+    font-size:18px;
+    overflow:auto;
+}
+
+#subheader {
+    background-color: #000; /* задает черный цвет фона */
+    color: #fff; /* задает белый цвет текста */
+    padding:15px 100px;
+    overflow:auto;
+     display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#header .logo {
+    font-family: 'Ubuntu', sans-serif;
+    float:left;
+    color: #000000;
+    font-size:26px;
+    margin-right:10%;
+}
+
+#subheader .korzina {
+    float:right;
+    padding-top:4px;
+}
+
+#content {
+    padding:0 100px;
+    overflow:hidden;
+    border-radius: 6px;
+    font-size: 17px;
+    line-height: 1.5;
+    text-align: center;
+}
+
+
+#sidebar {
+    width:220px;
+    padding:30px 20px 0 0;
+    float:left;
+}
+
+#sidebar ul{
+    margin:0;
+    padding:0;
+}
+
+#sidebar ul li {
+    margin:0;
+    list-style:none;
+    padding:10px 14px;
+}
+
+#sidebar ul li a {
+    display:block;
+    border-radius: 6px;
+    font-size: 17px;
+    line-height: 1.5;
+}
+
+#sidebar ul li a {
+  display: block;
+  padding: 10px 20px;
+  color: #333;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  position: relative;
+  overflow: hidden;
+
+}
+
+#sidebar ul li a:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 3px;
+  background-color: #5993bb;
+  transition: width 0.3s ease;
+}
+
+#sidebar ul li a:hover {
+  background-color: #f2f2f2;
+  color: #5993bb;
+}
+
+#sidebar ul li a:hover:before {
+  width: 100%;
+}
+
+#main {
+    float:left;
+    width: 96%;
+    margin-right:-220px;
+    overflow:hidden;
+}
+
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+.product-list .item {
+    width: 25%;
+    padding: 10px 20px 10px 0;
+    text-align: center;
+    line-height: 1.2;
+}
+
+.product-list .item img {
+    width: 100%;
+    height: 200px; /* Фиксированная высота */
+    object-fit: contain; /* Масштабирование изображения без обрезания */
+    margin-bottom: 8px;
+}
+.product-list .item a {
+    display: block;
+    padding: 10px 20px;
+    color: #333;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.product-list .item p.price {
+    color: #80af0b; /* Цвет цены */
+    font-size: 20px; /* Размер шрифта цены */
+    font-weight: bold; /* Жирный шрифт цены */
+    margin-top: 10px; /* Отступ сверху цены */
+}
+
+.product-list .item a:hover {
+    background-color: #5993bb;
+    color: #fff;
+}
+
+.product-detail {
+    margin: 0 auto;
+    max-width: 800px;
+    padding: 30px;
+    text-align: left;
+    overflow: hidden;
+    width: 100%;
+}
+
+.product-detail h1 {
+    clear: both;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.product-detail img {
+    float: left;
+    margin-right: 20px;
+    width: 300px;
+     margin-bottom: 20px;
+}
+
+.product-detail h2 {
+    clear: both;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.product-detail p {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.product-detail .price {
+    color: #80af0b; /* Цвет цены */
+    font-size: 20px; /* Размер шрифта цены */
+    font-weight: bold; /* Жирный шрифт цены */
+    margin-top: 10px; /* Отступ сверху цены */
+}
+
+.product-detail form {
+    clear: both;
+    margin-top: 20px;
+}
+
+.product-detail input[type="submit"] {
+    background-color: #5690dc; /* Цвет фона кнопки */
+    border: none;
+    border-radius: 6px;
+    color: #fff; /* Цвет текста кнопки */
+    cursor: pointer;
+    font-size: 18px;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
+    font-weight: bold; /* Полужирный шрифт */
+    letter-spacing: 1px; /* Расстояние между буквами */
+}
+
+.product-detail input[type="submit"]:hover {
+    background-color: #5804dd;
+}
+.order-form {
+    margin-top: 10px;
+    width: 70%;
+    float: left;
+}
+
+.order-form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.order-form input[type="text"],
+.order-form input[type="email"],
+.order-form input[type="tel"],
+.order-form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #000000;
+    border-radius: 4px;
+}
+
+.order-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+}
+
+.order-form input[type="submit"] {
+    background-color: #5690dc;
+    border: none;
+    border-radius: 6px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-top: 20px;
+}
+
+.order-form input[type="submit"]:hover {
+    background-color: #5804dd;
+}
+
+.order-form label,
+.order-form input,
+.order-form textarea,
+.order-form select,
+.order-form button,
+.order-form .checkbox input[type="checkbox"],
+.order-form .checkbox label {
+    font-size: 17px;
+    line-height: 1.5;
+    margin-bottom: 05px;
+}
+
+.order-info {
+    float:right;
+    width:300px;
+    background:#efefef;
+    padding:10px 20px;
+    color:#333;
+    border-bottom:4px solid #5993bb;
+}
+
+.order-info h3 {
+    color:#5993bb;
+}
+
+.order-info ul li {
+    margin:0;
+    padding:0;
+    font-size:14px;
+}
+
+.order-info p {
+    font-weight:bold;
+    float:right;
+}
+
+.order-info span {
+    float:right;
+}
+
+.order-info,
+.order-info h3,
+.order-info ul li,
+.order-info p,
+.order-info span {
+    font-size: 17px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.neg {
+    color: #f33636;
+     font-weight: bold;
+}
+
+.languages {
+   float:right;
+   padding-top:4px;
+   font-size:14px;
+}
+
+.languages ul {
+    list-style:none;
+    margin-top: 3.4px;
+    padding:0;
+    float:left;
+}
+
+.languages ul li {
+    float:left;
+    margin:0 0 0 10px;
+    font-size:14px;
+}
+
+.languages p {
+    float:left;
+    margin:0;
+    font-size: 15px;
+    line-height: 1.5;
+    text-align: center;
+}
+
+
+.recommendations {
+    clear:both;
+}
+
+.recommendations div {
+    float:left;
+}
+
+.recommendations img {
+    width:200px
+}
+
+.recommendations p {
+    clear:both;
+}
+
+.recommendations.korzina {
+    width:60%;
+    float:left;
+    overflow:auto;
+}
+
+.recommendations.korzina h3 {
+    margin-top:0;
+}
+
+.recommendations.korzina .item {
+    margin-right:10px;
+}
+
+.recommendations.korzina img {
+    width:120px;
+}
+
+/* braintree hosted fields */
+form div.field {
+    font-size:13px;
+    color:#666;
+    width:300px;
+    height:22px;
+    margin-bottom:10px;
+    padding:6px 12px;
+    border:0;
+    background:#efefef;
+    color:#666;
+    border-radius:4px;
+}
+
+.logo1 img {
+ max-height: 44px;
+    vertical-align: middle;
+    margin-left: 40px;
+
+}
+
+
+#footer {
+    background-color: #000;
+    color: #fff;
+    padding: 30px 0;
+    overflow: hidden;
+}
+
+#footer h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+#footer p {
+    font-size: 17px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
